@@ -1,6 +1,5 @@
 * {
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     background-position: center center;
 }
 
@@ -8,7 +7,7 @@ body {
     overflow-x: hidden;
 }
 
-main {
+section {
     display: flex;
     gap: 6px;
     padding: 6px;
@@ -23,18 +22,18 @@ main {
 .img_580 {
     height: 580px;
     width: 50%;
+    transition: transform 1s;
 
     &:hover {
-        
+          transform: translateY(-15px);
     }
 }
-
 
 @media screen and (max-width: 760px) {
     .img_580 {
         width: 100%;
     }
-    main {
+    section {
         flex-wrap: wrap;
     }
 }
@@ -96,33 +95,6 @@ main {
     max-width: 220px;
 }
 
-/* images latérales autour du titre */
-.side-film {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 220px;
-    opacity: 0.95;
-}
-
-.side-film.left {
-    left: 30px;
-}
-
-.side-film.right {
-    right: 30px;
-}
-
-/* adapte les images latérales sur écrans moyens */
-@media screen and (max-width: 992px) {
-    .side-film {
-        max-width: 160px;
-        left: 10px;
-        right: 10px;
-    }
-}
-
-/* Footer - réutilise palette existante */
 .footer {
     background-color: #f5f5f7;
     font-size: 13px;
@@ -156,23 +128,3 @@ main {
 .footer .small {
     color: #6e6e73;
 }
-
-.poster-section {
-    height: 580px;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-}
-
-.side-poster {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 480px;
-    z-index: 2;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-    object-fit: cover;
-}
-
-.side-poster.left  { left: -1000px;  }
-.side-poster.right { right: 2000px; }
