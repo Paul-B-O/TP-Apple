@@ -1,0 +1,178 @@
+* {
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center center;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    gap: 6px;
+    padding: 6px;
+}
+
+.paragraph {
+    margin: 0px auto;
+    font-size: 19px;
+    max-width: 320px;    
+}
+
+.img_580 {
+    height: 580px;
+    width: 50%;
+
+    &:hover {
+        
+    }
+}
+
+
+@media screen and (max-width: 760px) {
+    .img_580 {
+        width: 100%;
+    }
+    main {
+        flex-wrap: wrap;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 0% auto;
+    font-size: 14px;
+}
+
+.button {
+    width: fit-content;
+    height: 36px;
+    border-radius: 30px;
+    border: solid 1px;
+    margin: 15px;
+}
+
+
+.button-white {
+    border-color: #0071E3;
+    background-color: transparent;
+    color: #0071E3;
+}
+
+.button-blue {
+    border: none;
+    background-color: #0071E3;
+    color: white;
+}
+
+.button-white:hover {
+    border-color: white;
+    background-color: #0071E3;
+    color: white;
+}
+
+.button-blue:hover {
+    background-color: #0078f0;
+    color: white;
+}
+
+/* Apple TV section */
+.tv-section {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 580px; /* réutiliser ta hauteur */
+}
+
+/* petites adaptations du contenu central */
+.tv-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.tv-logo {
+    max-width: 220px;
+}
+
+/* images latérales autour du titre */
+.side-film {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 220px;
+    opacity: 0.95;
+}
+
+.side-film.left {
+    left: 30px;
+}
+
+.side-film.right {
+    right: 30px;
+}
+
+/* adapte les images latérales sur écrans moyens */
+@media screen and (max-width: 992px) {
+    .side-film {
+        max-width: 160px;
+        left: 10px;
+        right: 10px;
+    }
+}
+
+/* Footer - réutilise palette existante */
+.footer {
+    background-color: #f5f5f7;
+    font-size: 13px;
+    color: #6e6e73;
+}
+
+.footer h6 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    margin-bottom: 6px;
+    color: #6e6e73;
+    cursor: pointer;
+}
+
+.footer-list li:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.footer .small {
+    color: #6e6e73;
+}
+
+.poster-section {
+    height: 580px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.side-poster {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 480px;
+    z-index: 2;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    object-fit: cover;
+}
+
+.side-poster.left  { left: -1000px;  }
+.side-poster.right { right: 2000px; }
