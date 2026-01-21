@@ -53,7 +53,6 @@ section {
     margin: 15px;
 }
 
-
 .button-white {
     border-color: #0071E3;
     background-color: transparent;
@@ -75,24 +74,6 @@ section {
 .button-blue:hover {
     background-color: #0078f0;
     color: white;
-}
-
-/* Apple TV section */
-.tv-section {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    min-height: 580px; /* réutiliser ta hauteur */
-}
-
-/* petites adaptations du contenu central */
-.tv-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.tv-logo {
-    max-width: 220px;
 }
 
 .footer {
@@ -127,4 +108,9 @@ section {
 
 .footer .small {
     color: #6e6e73;
+}
+
+section .wiper {
+    display: flex;
+    justify-content: center;
 }
